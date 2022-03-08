@@ -22,16 +22,16 @@ export const NoticiaContainer = styled.div`
     }
     time {
       font-size: 1.2rem;
-      color: #9b9c9c;
+      color: #cbd5e1;
     }
     .time {
       display: flex;
       align-items: start;
       flex-direction: column;
-      border-bottom: 1.5px solid #9b9c9c;
+      border-bottom: 1.5px solid #cbd5e1;
       padding-bottom: 3rem;
       span {
-        color: #9b9c9c;
+        color: #cbd5e1;
         font-weight: bold;
       }
     }

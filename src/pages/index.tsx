@@ -68,8 +68,8 @@ function Home({ noticias }: HomeProps): JSX.Element {
         messageBox
         iconSize="60"
         iconColor="white"
-        iconBgColor="green"
-        headerIcon="https://proficientdesigners.in/wp-content/themes/pd/img/logo-new.png"
+        iconBgColor="#00e676"
+        headerIcon="https://images.prismic.io/sitesaae/552aa98a-76ca-4732-965c-667468b63134_SaaeLogoCampanha.png?auto=compress,format"
         headerIconColor="pink"
         headerTxtColor="black"
         headerBgColor="#0275d8"
