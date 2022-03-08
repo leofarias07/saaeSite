@@ -66,26 +66,25 @@ function Home({ noticias }: HomeProps): JSX.Element {
         autoOpen
         autoOpenTimer={5000}
         messageBox
-        messageBoxTxt="Hi Team, is there any related service available ?"
-        iconSize="40"
+        iconSize="60"
         iconColor="white"
         iconBgColor="green"
         headerIcon="https://proficientdesigners.in/wp-content/themes/pd/img/logo-new.png"
         headerIconColor="pink"
         headerTxtColor="black"
-        headerBgColor="green"
-        headerTitle="John Doe"
+        headerBgColor="#0275d8"
+        headerTitle="SAAE CAXIAS"
         headerCaption="Online"
         bodyBgColor="#bbb"
-        chatPersonName="Support"
+        chatPersonName="Suporte"
         chatMessage={
           <>
-            Hi there 👋 <br />
-            <br /> How can I help you?
+            Olá 👋 <br />
+            <br /> Como posso ajudá-lo?
           </>
         }
         footerBgColor="#999"
-        btnBgColor="yellow"
+        btnBgColor="green"
         btnTxtColor="black"
       />
     </>
