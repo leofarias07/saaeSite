@@ -59,7 +59,7 @@ function Home({ noticias }: HomeProps): JSX.Element {
         <Footer />
       </HomeContainer>
       <WhatsAppWidget
-        phoneNo="919884098840"
+        phoneNo="5599988334905"
         position="right"
         widgetWidth="300px"
         widgetWidthMobile="260px"
