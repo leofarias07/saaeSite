@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Prismic from '@prismicio/client';
 import { RichText } from 'prismic-dom';
+import Head from 'next/head';
 import Header from '../../../components/Header';
 import MenuMobile from '../../../components/MenuMobile';
 
@@ -20,6 +21,7 @@ interface NoticiaProps {
     title: string;
     description: string;
     content: string;
+    thumbnail: string;
     updatedAt: string;
   };
 }
@@ -33,6 +35,18 @@ export default function Noticia({ noticia }: NoticiaProps) {
 
   return (
     <ContentStyle>
+      <Head>
+        <title>{noticia.title} | SAAE CAXIAS</title>
+        <meta name="description" content={noticia.description} />
+        <meta property="og:image" content={noticia.thumbnail} />
+        <meta property="og:image:secure_url" content={noticia.thumbnail} />
+        <meta name="twitter:image" content={noticia.thumbnail} />
+        <meta name="twitter:image:src" content={noticia.thumbnail} />
+        <meta
+          property="og:description"
+          content="SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO DE CAXIAS-MA"
+        />
+      </Head>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
@@ -88,6 +102,7 @@ export const getStaticProps: GetStaticProps = async context => {
     title: response.data.title,
     description: response.data.description,
     content: RichText.asHtml(response.data.content),
+    thumbnail: response.data.thumbnail.url,
     updatedAt: new Date(response.last_publication_date).toLocaleDateString(
       'pt-BR',
       {

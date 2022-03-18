@@ -7,6 +7,7 @@ import Aos from 'aos';
 import 'react-whatsapp-chat-widget/index.css';
 
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import Header from '../components/Header';
 import MenuMobile from '../components/MenuMobile';
 import { HomeContainer } from '../styles/HomeStyles';
@@ -44,6 +45,21 @@ function Home({ noticias }: HomeProps): JSX.Element {
 
   return (
     <>
+      <Head>
+        <title>Home | SAAE CAXIAS</title>
+        <meta
+          name="description"
+          content="SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO DE CAXIAS-MA"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="SERVIÇO AUTÔNOMO DE ÁGUA E ESGOTO DE CAXIAS-MA"
+        />
+      </Head>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}

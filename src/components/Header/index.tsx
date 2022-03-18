@@ -15,8 +15,8 @@ function Header({ setMenuIsVisible }): JSX.Element {
         </div>
         <nav>
           <a href="/">Home</a>
-          <a href="#">Agencia Virtual</a>
-          <a href="/noticias">Noticias</a>
+          <a href="#">Agência Virtual</a>
+          <a href="/noticias">Notícias</a>
           <a href="#">Institucional</a>
         </nav>
       </section>
