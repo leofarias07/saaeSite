@@ -3,13 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.header`
   width: 100%;
   background: #0275d8;
-
   padding: 14.5px 64px;
   display: flex;
   align-items: start;
   justify-content: space-between;
   border-bottom: 5px solid #fff;
-
   > section {
     display: flex;
     justify-content: space-between;
