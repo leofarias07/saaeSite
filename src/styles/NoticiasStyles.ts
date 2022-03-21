@@ -13,14 +13,13 @@ export const NoticiasContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    img {
-      height: 200px;
-    }
-    h2 {
-      font-size: 1.4rem;
+    @media (max-width: 1450px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
     }
     @media (max-width: 1000px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
     }
 
     @media (max-width: 500px) {

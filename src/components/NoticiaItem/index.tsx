@@ -4,30 +4,24 @@ import { Container } from './styles';
 interface NoticiaItemProps {
   img: string;
   title: string;
-  description: string;
   slug: string;
 }
 
-function NoticiaItem({
-  title,
-  description,
-  img,
-  slug
-}: NoticiaItemProps): JSX.Element {
+function NoticiaItem({ title, img, slug }: NoticiaItemProps): JSX.Element {
   return (
     <Container>
-      <Link href={`/noticias/${slug}`}>
-        <a>
-          <div className="overlay">
-            <section>
+      <div className="cardNoticia">
+        <Link href={`/noticias/${slug}`}>
+          <a>
+            <div className="imgNoticia">
               <img src={img} alt="" />
-
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </section>
-          </div>
-        </a>
-      </Link>
+            </div>
+            <div>
+              <h1>{title}</h1>
+            </div>
+          </a>
+        </Link>
+      </div>
     </Container>
   );
 }

@@ -11,7 +11,6 @@ import { NoticiasContainer } from '../../styles/NoticiasStyles';
 interface Inoticia {
   slug: string;
   title: string;
-  description: string;
   thumbnail: string;
 }
 
@@ -42,9 +41,8 @@ function Noticias({ noticias }: NoticiasProps) {
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
       />
+      <Header setMenuIsVisible={setMenuIsVisible} />
       <NoticiasContainer>
-        <Header setMenuIsVisible={setMenuIsVisible} />
-
         <main className="container">
           {noticias.map(noticia => (
             <NoticiaItem
@@ -52,7 +50,6 @@ function Noticias({ noticias }: NoticiasProps) {
               img={noticia.thumbnail}
               title={noticia.title}
               slug={noticia.slug}
-              description=""
             />
           ))}
         </main>
@@ -72,8 +69,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const noticias = noticiaResponse.results.map(noticia => ({
     slug: noticia.uid,
     title: noticia.data.title,
-
-    description: noticia.data.description,
 
     thumbnail: noticia.data.thumbnail.url
   }));

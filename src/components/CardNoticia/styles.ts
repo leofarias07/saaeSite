@@ -18,7 +18,6 @@ export const Container = styled.div`
       height: 300px;
       width: 500px;
       margin-bottom: 0.8rem;
-      border-bottom: 0.1px solid #cfd4d1;
     }
     h1 {
       font-size: 1.5rem;
